@@ -18,7 +18,7 @@ public:
             p = c;
             c = n;
         }    
-    head = p; 
+   head = p; // need this because the head is still starting from the same place
     return head;
 }
 
