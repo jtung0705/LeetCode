@@ -26,6 +26,7 @@ public:
             return false;
             }
         }
+        // if EVERYTHING is parenthesis, there should be no errors and it should just return the status of the stack
         return parenthesis.empty();
     }
 };
