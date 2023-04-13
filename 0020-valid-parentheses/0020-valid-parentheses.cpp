@@ -25,9 +25,7 @@ public:
                 // or the string is not parenthesis only
             return false;
             }
-        
         }
-        
-    return parenthesis.empty();
+        return parenthesis.empty();
     }
 };
