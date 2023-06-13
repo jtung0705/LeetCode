@@ -1,10 +1,8 @@
 class Solution {
 public:
-    bool isAnagram(string a, string b) {
-
-std::sort(    a.begin() ,  a.end()     ) ; // in-place sort
-std::sort(    b.begin() ,  b.end()     ) ;
-return (a == b);          
-}
-
+    bool isAnagram(string s, string t) {
+        sort(s.begin(), s.end());
+        sort(t.begin(), t.end());
+    return s == t;
+    }
 };
