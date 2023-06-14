@@ -11,9 +11,9 @@
 class Solution {
 public:
     ListNode* middleNode(ListNode* head) {
-        ListNode* fast, *slow;
-        slow = head;
-        fast = head;
+       // ListNode* fast, *slow;
+        auto slow = head;
+        auto fast = head;
         while (fast != nullptr && fast->next != nullptr){
             fast = fast->next->next;
             slow = slow->next;
