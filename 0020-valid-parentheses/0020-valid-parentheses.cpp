@@ -1,32 +1,29 @@
 class Solution {
 public:
-    bool isValid(string str) {
- /*       if (str.length() % 2 == 1 ){
-            return false;
+    bool isValid(string s) {
+        std::unordered_map<char, char>hashmap = {
+            {']','['}, 
+            {'}','{'}, 
+            {')','('} 
+        };
+        std::stack<char> stack;
+        for(char c : s){
+            if (c == '[' || c == '{' || c == '(' ){
+            stack.push(c);
         }
-        */
+            // is the stack empty
+            // what is the top
+            // does my character correspond TO the top
+            // last two can be helped with a hashmap because ican check if the key (right closing) is equal to top?
+            else if ( !stack.empty() && (hashmap[c] == stack.top() )  ){
+                stack.pop();
+            }
+            else {
+                return false;
+            }
         
-        stack<char> parenthesis;
-        for (char s : str) {
-            if (s == '(' || s == '{'|| s == '['){
-                 parenthesis.push(s);
-            }
-            else if ( !parenthesis.empty() && s == '}' && parenthesis.top() == '{' ){
-                parenthesis.pop();
-            }
-            else if ( !parenthesis.empty() && s == ')' && parenthesis.top() == '(' ){
-                parenthesis.pop();
-            }
-            else if ( !parenthesis.empty() && s == ']' && parenthesis.top() == '[' ){
-                parenthesis.pop();
-            }
-            else{ 
-                // this is if parenthesis is empty but it is trying to push right parenthesis, as in first char
-                // or the string is not parenthesis only
-            return false;
-            }
-        }
-        // if EVERYTHING is parenthesis, there should be no errors and it should just return the status of the stack
-        return parenthesis.empty();
+   }
+        
+return stack.empty();
     }
 };
