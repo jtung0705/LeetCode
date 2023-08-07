@@ -18,7 +18,7 @@ public:
             else if ( !stack.empty() && (hashmap[c] == stack.top() )  ){
                 stack.pop();
             }
-            else {
+            else{
                 return false;
             }
         
