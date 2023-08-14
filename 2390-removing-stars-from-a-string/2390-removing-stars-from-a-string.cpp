@@ -1,7 +1,7 @@
 class Solution {
 public:
     string removeStars(string s) {
-        stack<char> stk, rvrse;
+        stack<char> stk;
         string smp = "";
         for (char c : s){
             if ( c != '*' ){
@@ -12,11 +12,10 @@ public:
             }
         }   
         for (int i = stk.size(); i > 0; i--){
-            rvrse.push( stk.top() );
             smp += stk.top();
             stk.pop();
         }
-        reverse(smp.begin() , smp.end());
+        reverse(smp.begin(), smp.end());
         return smp;    
     }
 };
