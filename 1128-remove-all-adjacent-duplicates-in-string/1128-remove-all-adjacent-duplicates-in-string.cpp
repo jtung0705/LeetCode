@@ -14,7 +14,7 @@ public:
         }
          for (int i = stk.size(); i > 0; i--){
              //starts from top, goes down
-             answer = (stk.top() + answer); // have to reverse if I do this because its like
+             answer += stk.top(); // have to reverse if I do this because its like
             //  " " + k
             //  then 
             //  k + j
@@ -24,6 +24,7 @@ public:
             //  then jk  
              stk.pop();
         }
+        reverse( answer.begin(), answer.end() );
      return answer;   
     }
 };
