@@ -13,10 +13,10 @@ public:
         }
         
          for (int i = stk.size(); i > 0; i--){
-             answer = stk.top() + answer;
+             answer += stk.top();
              stk.pop();
         }
-      //  reverse( answer.begin(), answer.end() );
+        reverse( answer.begin(), answer.end() );
         return answer;
     }
 };
