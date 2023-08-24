@@ -12,10 +12,11 @@ public:
             }
         }   
         for (int i = stk.size(); i > 0; i--){
-            smp += stk.top();
+            smp += stk.top(); 
             stk.pop();
         }
-        reverse(smp.begin(), smp.end());
+        reverse(smp.begin(), smp.end()); 
+        // testcase 3 is really long, cannot do stk.top() + smp;
         return smp;    
     }
 };
