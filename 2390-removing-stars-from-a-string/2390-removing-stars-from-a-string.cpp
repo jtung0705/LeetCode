@@ -11,7 +11,7 @@ public:
                 stk.pop();
             }
         }   
-        while (!stk.empty()){
+        while (not stk.empty() ){
             smp += stk.top(); 
             stk.pop();
         }
