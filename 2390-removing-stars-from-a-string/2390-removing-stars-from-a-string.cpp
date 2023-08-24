@@ -11,10 +11,17 @@ public:
                 stk.pop();
             }
         }   
+        while (!stk.empty()){
+            smp += stk.top(); 
+            stk.pop();
+        }
+        // can also do while (!stk.empty()) ?
+        /*
         for (int i = stk.size(); i > 0; i--){
             smp += stk.top(); 
             stk.pop();
         }
+        */
         reverse(smp.begin(), smp.end()); 
         // testcase 3 is really long, cannot do stk.top() + smp;
         return smp;    
