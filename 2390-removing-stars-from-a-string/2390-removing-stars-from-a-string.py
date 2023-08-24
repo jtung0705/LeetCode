@@ -1,12 +1,17 @@
-class Solution:
-    def removeStars(self, s: str) -> str:
+class Solution(object):
+    def removeStars(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
         stack = []
         string = ""
-        for c in s:
-            if c != '*': 
-                stack.append(c)
-            elif len(stack) != 0: #make sure the stack is not empty, so you can pop
-                stack.pop()        
+        for char in s:
+            if char == '*' and len(stack) != 0:
+                stack.pop()
+            else:
+                stack.append(char)
         for ch in stack:
-            string += ch #just keep adding everything inside the stack
+            string += ch
         return string
+        
